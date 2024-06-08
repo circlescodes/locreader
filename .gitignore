@@ -1,0 +1,4 @@
+.zig-cache
+zig-out
+# Fallback for older zig versions
+zig-cache
