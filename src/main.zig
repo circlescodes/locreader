@@ -4,7 +4,7 @@ const stdout = std.io.getStdOut().writer();
 
 pub fn main() !void {
     var gpa = std.heap.GeneralPurposeAllocator(.{}){};
-    const alloc = std.heap.page_allocator;
+    const alloc = gpa.allocator();
     defer _ = gpa.deinit();
 
     const args = try std.process.argsAlloc(alloc);
